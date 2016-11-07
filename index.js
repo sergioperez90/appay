@@ -6,10 +6,10 @@ var usuarios = require('./usuarios'); //Obtengo el archivo js de usuarios
 var productos = require('./productos'); //Obtengo el archivo js de productos
 var tiendas = require('./tiendas'); //Obtengo el archivo js de tiendas
 var connection = mysql.createConnection({ //Conexion a la BBDD de MySQL
-		host     : 'localhost',
-		user     : 'root',
-		password : '',
-		database : 'Appay_bbdd',
+		host     : 'mysql.hostinger.es',
+		user     : 'u720944730_appay',
+		password : 'multimedia',
+		database : 'u720944730_appay',
 });
 
 app.use(bodyParser.urlencoded({ extended: false }));
