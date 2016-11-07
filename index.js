@@ -42,6 +42,7 @@ tiendas.getGranSuperficie(app, connection);
 tiendas.updateGranSuperficie(app, connection);
 
 //Mensaje de que se esta conectando el puerto
-http.listen(5000,function(){
-	console.log("Conectado y escuchando en el puerto 8080");
+var port = process.env.PORT || 5000;
+http.listen(port,function(){
+	console.log("Conectado y escuchando en el puerto "+port);
 });
