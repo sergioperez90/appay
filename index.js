@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-app.get('/' function (request, response){
+app.get('/', function (request, response){
 	response.send("Hello world");
 	
 });
