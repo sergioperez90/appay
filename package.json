@@ -2,6 +2,9 @@
 "name": "Node-APIs",
 "version": "0.0.1",
 "main": "index.js",
+"scripts": {
+    "start": "node index.js"
+  },
 "dependencies": {
 									"express": "^4.8.7",
 									"mysql":"^2.5.5",
