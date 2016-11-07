@@ -11,6 +11,7 @@ var connection = mysql.createConnection({ //Conexion a la BBDD de MySQL
 		password : 'multimedia',
 		database : 'u720944730_appay',
 });
+connection.connect();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
