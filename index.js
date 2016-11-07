@@ -16,6 +16,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
+app.get('/' function (request, response){
+	response.send("Hello world");
+	
+});
+
 //Llamo a los metodos de la clase usuario
 usuarios.getUsuarios(app, connection);
 usuarios.postUsuarios(app, connection); 
