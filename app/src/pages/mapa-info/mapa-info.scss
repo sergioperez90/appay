@@ -1,0 +1,18 @@
+page-mapa-info {
+    .content-md{
+        background-color:#eee;
+        opacity: 0.9;
+         //filter: blur(6px);
+    }
+    .card-md {
+        margin-top:15px;
+    }
+    .item-md ion-icon[item-left] + .item-inner, .item-md ion-icon[item-left] + .item-input{
+        margin-left:10px;
+    }
+
+
+
+}
+
+

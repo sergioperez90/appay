@@ -1,0 +1,27 @@
+<ion-menu [content]="content">
+<ion-content>
+    <div class="cabecera-menu">
+      <img src="assets/appay.png" height="80"/>
+      <p class="nombre"><strong>Sergio Pérez</strong></p>
+      <p class="correo">info@appay.es</p>
+    </div>
+    <ion-list class="lista-menu1">
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          <ion-icon [name]="p.icon"></ion-icon>
+        {{p.title}}
+      </button>
+    </ion-list>
+
+    <!--Esto habra que cambiarlo conforme se vayan haciendo las paginas, en forma de array como en la parte de arriba -->
+    <ion-list class="lista-menu2">
+        <button menuClose ion-item *ngFor="let p of pages2" (click)="openPage(p)">
+          <ion-icon [name]="p.icon"></ion-icon>
+        {{p.title}}
+       </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

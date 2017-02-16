@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+     Nombre de la tienda
+    </ion-title>
+  </ion-navbar>
+  
+  <!--La barra de ofertas -->
+   <ion-segment [(ngModel)]="deal">
+      <ion-segment-button value="ofertas">
+        Ofertas 
+      </ion-segment-button>
+      <ion-segment-button value="personalizadas">
+        Personalizadas
+      </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="card-background-page">
+<!---
+  <ion-fab right bottom>
+    <button [navPush]="scanProduct" ion-fab color="primary"><ion-icon name="camera"></ion-icon></button>
+  </ion-fab>-->
+  
+  <div [ngSwitch]="deal">
+  <ion-list *ngSwitchCase="'ofertas'">
+    <ion-item>
+      <!--Aqui dentro van todas las ofertas -->
+        <ion-card>
+          <img src="assets/images/chaqueta.jpg"/>
+          <div class="card-title">Chaqueta</div>
+          <div class="card-subtitle">40,95€</div>
+        </ion-card>
+
+        <ion-card>
+          <img src="assets/images/camiseta.jpg"/>
+          <div class="card-title">Camiseta</div>
+          <div class="card-subtitle">10,95€</div>
+        </ion-card>
+
+        <ion-card>
+          <img src="assets/images/zapatillas.jpg"/>
+          <div class="card-title">Zapatillas</div>
+          <div class="card-subtitle">15,95€</div>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'personalizadas'">
+    <ion-item>
+    <!--Aqui dentro van todas las personalizadas -->      
+    </ion-item>
+  </ion-list>
+  </div>
+  
+  <!--
+ <ion-fab right bottom>
+    <button (click)="scan()" ion-fab color="primary"><img src="assets/code.png" height="30" /></button>
+</ion-fab>-->
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary"><img src="assets/code.png" height="30" /></button>
+    <ion-fab-list side="top">
+      <button (click)="scan()" ion-fab color="primary"><img src="assets/code.png"/></button>
+      <button ion-fab><ion-icon name="create"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+  
+
+
+
+</ion-content>
+
