@@ -1,5 +1,5 @@
-<ion-header>
-  <ion-navbar color="primary">
+<ion-header no-shadow no-border>
+  <ion-navbar color="primary" >
     <button ion-button menuToggle icon-only>
       <ion-icon name='menu'></ion-icon>
     </button>
@@ -8,11 +8,55 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content scroll>
  <div  id="fondoperfil">
    <img margin-top [src]="'assets/img/perfil.jpg'" />
    <h2>Emilio Maestre Hortal</h2>
+         <ion-fab class="iconocamara">
+      <button ion-fab  color="danger" ><ion-icon name="camera"></ion-icon></button>
+      </ion-fab>
  </div>
-AQUI VA PERFIL
-</ion-content>
+
+ <div no-margin id="misdatos">
+   <h3 no-margin>Mis datos</h3>
+ </div>
+
+<div id="formulario">
+
+
+
+    <ion-item>
+      <ion-label color="primary" stacked>Correo electrónico</ion-label>
+      <ion-input id="correo" type="email" value="emiliomaestre94@gmail.com"></ion-input>
+    </ion-item>
+
+      <ion-item>
+      <ion-label color="primary" stacked>DNI</ion-label>
+      <ion-input type="text" value="53247946W"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Nombre</ion-label>
+      <ion-input color="#fffff" type="text" value="Emilio Maestre Hortal"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Dirección</ion-label>
+      <ion-input type="text" value="Paseo de las Azucenas 8A"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>03690</ion-label>
+      <ion-input type="text" value="Paseo de las Azucenas 8A"></ion-input>
+    </ion-item>
+
+
+
+</div>
+<div id="containerboton">
+      <button id="botonacceder" ion-button >
+      Guardar datos
+    </button>
+</div>
+</ion-content> 
  
