@@ -18,7 +18,7 @@ import { ContactPage } from '../pages/contact/contact'
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = SlidesPage;
+  rootPage: any = PerfilPage;
   pages: Array<{icon: string, title: string, component: any}>;
   pages2: Array<{icon: string, title: string, component: any}>;
 

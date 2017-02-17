@@ -22452,6 +22452,67 @@ page-mapa-info .item-md ion-icon[item-left] + .item-inner, page-mapa-info .item-
   margin-left: 10px;
 }
 
+page-perfil #fondoperfil {
+  height: 38vh;
+  background-color: #124670;
+  padding-top: 1px;
+  text-align: center;
+  color: white;
+}
+
+page-perfil img {
+  width: 150;
+  height: 150px;
+  border-radius: 300px;
+  border: 3px solid white;
+}
+
+page-perfil h2 {
+  margin-top: 5px;
+}
+
+page-perfil .iconocamara {
+  position: relative;
+  top: -34px;
+}
+
+page-perfil .fab-md-danger {
+  margin: 0;
+  right: 0;
+  margin-left: 80%;
+  bottom: -25px;
+}
+
+page-perfil #misdatos {
+  height: 60px;
+  background: #07243c;
+  color: white;
+  text-align: center;
+}
+
+page-perfil h3 {
+  padding-top: 16px;
+}
+
+page-perfil #formulario {
+  padding-left: 16px;
+  margin-right: 16px;
+}
+
+page-perfil #containerboton {
+  height: 100px;
+  text-align: center;
+}
+
+page-perfil #botonacceder {
+  text-transform: none;
+  width: 80%;
+  font-size: 1.15em;
+  color: white;
+  background-color: #f53d3d;
+  margin-bottom: 70px;
+}
+
 page-scanproduct p {
   text-align: center;
   color: #124670;
