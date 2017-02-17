@@ -1,3 +1,4 @@
+import { PerfilPage } from './../pages/perfil/perfil';
 import { MapaPage } from './../pages/mapa/mapa';
 import { SlidesPage } from './../pages/slides/slides';
 import { FacturasPage } from './../pages/facturas/facturas';
@@ -41,7 +42,7 @@ export class MyApp {
     ];
   }
 
-  
+   
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -56,6 +57,12 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+    NavegarPerfil() {
+    // Reset the content nav to have just this page
+    // we wouldn't want the back button to show in this scenario
+    this.nav.setRoot(PerfilPage);
   }
   
 }
