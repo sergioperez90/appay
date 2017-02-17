@@ -19,4 +19,8 @@ export class PerfilPage {
     console.log('ionViewDidLoad PerfilPage');
   }
 
+  ngOnInit(){
+
+  }
+
 }
