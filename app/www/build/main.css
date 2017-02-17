@@ -22452,6 +22452,21 @@ page-mapa-info .item-md ion-icon[item-left] + .item-inner, page-mapa-info .item-
   margin-left: 10px;
 }
 
+page-perfil #fondoperfil {
+  height: 40vh;
+  background-color: #124670;
+  padding-top: 1px;
+  text-align: center;
+  color: white;
+}
+
+page-perfil img {
+  width: 150;
+  height: 150px;
+  border-radius: 300px;
+  border: 3px solid white;
+}
+
 page-scanproduct p {
   text-align: center;
   color: #124670;
