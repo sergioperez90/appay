@@ -3,7 +3,7 @@ import { MapaPage } from './../pages/mapa/mapa';
 import { SlidesPage } from './../pages/slides/slides';
 import { FacturasPage } from './../pages/facturas/facturas';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform,AlertController,LoadingController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
@@ -23,14 +23,19 @@ export class MyApp {
   pages2: Array<{icon: string, title: string, component: any}>;
 
 
-  constructor(public platform: Platform) {
+  constructor(
+    public platform: Platform,
+    private alertCtrl: AlertController,
+    public loadingCtrl: LoadingController
+  ){
+
     this.initializeApp();
 
     // Array de paginas para el menu, con su icono, su titulo, y el enlace.
     this.pages = [
       { icon: "home", title: 'Inicio', component: HomePage },
       { icon: "qr-scanner", title: 'Seleccionar tienda', component: ScanStore },
-      { icon: "contact", title: 'Mi pefil', component: ScanStore },
+      { icon: "contact", title: 'Mi perfil', component: PerfilPage },
       { icon: "paper", title: 'Mis facturas', component: FacturasPage }
      
     ];
@@ -38,10 +43,10 @@ export class MyApp {
       { icon: "pin", title: 'Ver tiendas', component: MapaPage },
       { icon: "paper-plane", title: 'Contactar', component: ContactPage },
       { icon: "help", title: 'Ayuda', component: SlidesPage },
-      { icon: "exit", title: 'Cerrar sesión', component: ContactPage }
+      //{ icon: "exit", title: 'Cerrar sesión', component: ContactPage }
     ];
-  }
-
+  } 
+ 
    
 
   initializeApp() {
@@ -63,6 +68,37 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(PerfilPage);
+  }
+
+  CerrarSesion(){
+    let alert = this.alertCtrl.create({
+    title: 'Cerrar sesión',
+    message: '¿Estás seguro de que deseas cerrar tu sesión en Appay?',
+    buttons: [
+      {
+        text: 'Cancelar',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      },
+      {
+        text: 'Confirmar',
+        handler: () => {
+          this.MostrarLoading();
+        }
+      }
+    ]
+  });
+  alert.present();
+  }
+
+  MostrarLoading(){
+    let loader = this.loadingCtrl.create({
+      content: "Cerrando sesión...",
+      duration: 3000 //luego lo quitaremos 
+    });
+    loader.present();
   }
   
 }

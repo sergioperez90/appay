@@ -59,8 +59,21 @@ page-perfil {
         font-size: 1.15em;
         color: white;
         background-color: #f53d3d;
-       margin-bottom:70px;
-       
+        margin-bottom:70px;
+        margin-top:20px;
+    }
+    .label-md-primary, .item-input .label-md-primary, .item-select .label-md-primary, .item-datetime .label-md-primary{
+        font-size:1.1em;
+    }
+
+    .item-md{
+         border-bottom: 0.5px solid darkgrey;
+    }
+
+    .item-md.item-label-stacked [item-right], .item-md.item-label-floating [item-right]{
+        margin-top: 33px;
+        margin-bottom: 7px;
+        font-size: 1.5em;
     }
 
 }
