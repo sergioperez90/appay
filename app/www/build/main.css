@@ -22511,6 +22511,21 @@ page-perfil #botonacceder {
   color: white;
   background-color: #f53d3d;
   margin-bottom: 70px;
+  margin-top: 20px;
+}
+
+page-perfil .label-md-primary, page-perfil .item-input .label-md-primary, page-perfil .item-select .label-md-primary, page-perfil .item-datetime .label-md-primary {
+  font-size: 1.1em;
+}
+
+page-perfil .item-md {
+  border-bottom: 0.5px solid darkgrey;
+}
+
+page-perfil .item-md.item-label-stacked [item-right], page-perfil .item-md.item-label-floating [item-right] {
+  margin-top: 33px;
+  margin-bottom: 7px;
+  font-size: 1.5em;
 }
 
 page-scanproduct p {
