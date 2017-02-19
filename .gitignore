@@ -2,8 +2,10 @@
 node_modules
 npm-debug.log
 platforms
-build 
-
+app\www\build\
+build/*
+**build/
+app/www/build/*
 
 # Local development
 *.env
