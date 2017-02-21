@@ -1,3 +1,4 @@
+import { IntroTiendaPage } from './../pages/intro-tienda/intro-tienda';
 import { PerfilPage } from './../pages/perfil/perfil';
 import { MapaInfoPage } from './../pages/mapa-info/mapa-info';
 import { MapaPage } from './../pages/mapa/mapa';
@@ -31,7 +32,8 @@ import { ScanStore } from '../pages/scanstore/scanstore';
     SlidesPage,
     MapaPage,
     MapaInfoPage,
-    PerfilPage
+    PerfilPage,
+    IntroTiendaPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -50,7 +52,8 @@ import { ScanStore } from '../pages/scanstore/scanstore';
     SlidesPage,
     MapaPage,
     MapaInfoPage,
-    PerfilPage
+    PerfilPage,
+    IntroTiendaPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, UsuariosService]
 })

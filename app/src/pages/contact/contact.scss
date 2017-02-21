@@ -1,12 +1,27 @@
 page-contact {
-    button.enviar{
+    .body{
+        background:$grisfondo;
+    }
+    #ContainerSuperior{
+        background-color: #133856;
+        width:100%;
+        margin:0 auto;
         text-align: center;
     }
-    ion-input, ion-textarea{
-        border-bottom: 1px solid $primary;
+    #fotofondo2{
+        width:80%; 
+        position: relative;
+        bottom: -5px;
     }
-    p.info{
-        font-size: 14px;
-        text-align: center;
+
+    .item-md ion-icon[item-left], .item-md ion-icon[item-right]{
+        margin-left:10px;
     }
-}
+    ion-label.label.label-md{
+        color:black;
+    }
+    .item-md p {
+        text-align: left
+    }
+
+}   
