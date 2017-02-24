@@ -44,9 +44,9 @@ page-facturas {
         }
 
         .precio-factura{
-            font-size: 2rem;
+            font-size: 1.5rem;
             position: absolute;
-            right: 20px;
+            right: 10px;
             color: #124670;
         }
 
@@ -57,5 +57,9 @@ page-facturas {
         .label-md{
         margin: 0;
         }
-            
+      button.botones-facturas.item.item-block.item-md{
+          padding: 10px;
+          border-bottom: 1px solid #eee;
+      }
+        
 }

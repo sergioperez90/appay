@@ -17,7 +17,7 @@ export class FacturasPage {
     this.facturas = [
       {
         'title': 'Mercadona',
-        'id':'M01',
+        'id':'013432143441234',
         'direccion': 'C/: Princesa Mercedes Nº12',
         'cif':'A46103834',
         'provincia':'Alicante',

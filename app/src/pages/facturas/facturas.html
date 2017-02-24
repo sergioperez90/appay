@@ -17,9 +17,8 @@
   <ion-list>
     <ion-item-sliding *ngFor="let factura of facturas">
 
-        <button ion-item (click)="abrirDetalleFactura(factura)" icon-left>
-          <ion-card>
-              <ion-card-content>
+        <button class="botones-facturas" ion-item (click)="abrirDetalleFactura(factura)" icon-left>
+         
 
                   <ion-thumbnail item-left>
                       <img [src]="factura.imagen">
@@ -30,14 +29,12 @@
                         <p class="titulo-tienda">{{ factura.title }}</p>
                         <p>{{ factura.direccion }}</p>
                         <p>{{ factura.ciudad }} ({{ factura.provincia }}) {{ factura.cp }}</p>
-                        <p><em>{{ factura.fecha }} · {{ factura.hora }}</em></p>
+                        <p><strong>{{ factura.fecha }} · {{ factura.hora }}</strong></p>
                       </ion-col>
                         <p class="precio-factura">{{ factura.importe }}</p>
 
                     </ion-row>
-                    
-              </ion-card-content>
-            </ion-card>
+              
         </button>
 
 

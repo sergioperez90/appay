@@ -22223,6 +22223,142 @@ sub {
   }
 }
 
+page-acceder .toolbar-background-md {
+  border-color: none;
+  background: none;
+}
+
+page-acceder .toolbar-title-md {
+  color: white;
+}
+
+page-acceder .bar-button-default-md, page-acceder .bar-button-clear-md-default, page-acceder .bar-button-md-default {
+  color: white;
+}
+
+page-acceder .header-md::after, page-acceder .tabs-md[tabsPlacement="top"] > .tabbar::after, page-acceder .footer-md::before, page-acceder .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none;
+}
+
+page-acceder #botonacceder {
+  padding-bottom: 23px;
+  text-transform: none;
+  width: 100%;
+  font-size: 1.15em;
+  padding-top: 23px;
+  color: white;
+  background-color: #cc3d4a;
+}
+
+page-acceder .list-md {
+  margin-top: 31%;
+}
+
+page-acceder p {
+  color: white;
+}
+
+page-acceder a {
+  text-decoration: underline;
+  color: white;
+}
+
+page-acceder ion-content {
+  background-image: url("../assets/img/backgroundv2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+page-acceder ion-icon {
+  padding-left: 10px;
+}
+
+page-carrito .content-md {
+  background-color: #eee;
+}
+
+page-carrito ion-note {
+  font-size: 12px;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-top: 14px;
+}
+
+page-carrito .iconoeliminar {
+  font-size: 1.4em;
+}
+
+page-carrito .linea-total {
+  text-align: right;
+  color: #124670;
+}
+
+page-carrito .linea-total strong {
+  font-size: 30px;
+}
+
+page-carrito .linea-total .total {
+  font-size: 18px;
+}
+
+page-carrito .boton-pagar {
+  text-align: center;
+}
+
+page-carrito .boton-pagar ion-icon {
+  margin-right: 5px;
+}
+
+page-carrito .boton-pagar button {
+  font-size: 18px;
+}
+
+page-carrito .card-md {
+  margin: 0;
+  width: calc(100% - 0px);
+}
+
+page-carrito .list-md ion-item-sliding {
+  border-bottom: 1px solid #eee;
+}
+
+page-carrito .cant {
+  margin-top: 20px;
+}
+
+page-carrito .cantidad {
+  border: 1px solid #a3a3a3;
+  background: #a3a3a3;
+  padding: 5px;
+  color: #fff;
+}
+
+page-carrito .contador {
+  border: 1px solid #a3a3a3;
+  padding: 5px 6px;
+  color: #000;
+}
+
+page-carrito .contador2 {
+  border: 1px solid #a3a3a3;
+  padding: 5px;
+  color: #000;
+}
+
+page-carrito h2 {
+  font-weight: bold;
+}
+
+page-carrito .item-md ion-avatar ion-img, page-carrito .item-md ion-avatar img {
+  margin-left: 10px;
+}
+
+page-carrito .item-md [item-left], page-carrito .item-md [item-right] {
+  margin: 25px 8px 9px 0;
+}
+
 page-contact button.enviar {
   text-align: center;
 }
@@ -22234,6 +22370,107 @@ page-contact ion-input, page-contact ion-textarea {
 page-contact p.info {
   font-size: 14px;
   text-align: center;
+}
+
+page-detalle-producto .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+page-detalle-producto .video-container iframe,
+page-detalle-producto .video-container object,
+page-detalle-producto .video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+page-detalle-producto p {
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 0 20px;
+  color: #124670;
+}
+
+page-detalle-producto h2 {
+  color: #124670;
+  padding: 0 20px;
+  text-align: left;
+  font-size: 30px;
+}
+
+page-detalle-producto .imagen {
+  background-image: url(https://cdn3.cnet.com/img/UxcARCVAmoih6RLZqLUT964Lvuw=/620x0/2013/11/11/3dd2de99-84cb-11e3-beb9-14feb5ca9861/Sony_PS4_35618167_03.jpg);
+  height: 35vh;
+  position: relative;
+}
+
+page-detalle-producto .cant {
+  text-align: center;
+}
+
+page-detalle-producto .cantidad {
+  border: 1px solid #a3a3a3;
+  background: #a3a3a3;
+  padding: 5px;
+  color: #fff;
+}
+
+page-detalle-producto .contador {
+  border: 1px solid #a3a3a3;
+  padding: 5px 6px;
+  color: #000;
+}
+
+page-detalle-producto .contador2 {
+  border: 1px solid #a3a3a3;
+  padding: 5px;
+  color: #000;
+}
+
+page-detalle-producto ion-col {
+  text-align: center;
+}
+
+page-detalle-producto ion-grid {
+  padding: 0;
+}
+
+page-detalle-producto .numberCircle {
+  font-size: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 0 2px;
+  border-radius: 5px;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 8px;
+}
+
+page-detalle-producto .num-producto {
+  color: #aaa;
+  padding: 0 20px;
+}
+
+page-detalle-producto .tutorial {
+  text-align: center;
+  background: #124670;
+  border-radius: 10px;
+  color: #fff;
+  padding: 3px 0;
+  width: 80px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+page-detalle-producto ion-fab {
+  bottom: 0;
+  right: 10px;
 }
 
 page-detallefactura .card-md {
@@ -22256,14 +22493,11 @@ page-detallefactura b {
 }
 
 page-detallefactura ion-thumbnail img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   float: left;
   margin-right: 10px;
-}
-
-page-detallefactura .info {
-  margin-top: -5px;
+  margin-top: 5px;
 }
 
 page-detallefactura .info p {
@@ -22277,6 +22511,7 @@ page-detallefactura img.pdf {
 
 page-detallefactura .productos {
   margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 page-detallefactura p span {
@@ -22289,6 +22524,23 @@ page-detallefactura span.id-factura {
 }
 
 page-detallefactura .info p {
+  font-size: 14px;
+}
+
+page-detallefactura .info strong {
+  font-size: 16px;
+}
+
+page-detallefactura .num-fact {
+  text-align: right;
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+page-detallefactura .fecha {
+  font-weight: bold;
   font-size: 14px;
 }
 
@@ -22309,23 +22561,62 @@ page-detallefactura .pie p {
   font-size: 12px;
   color: #124670;
   margin-top: 0px;
+  padding: 0 16px;
 }
 
 page-detallefactura .productos ion-card-content {
   border: 1px solid #eee;
 }
 
-page-detallefactura p.total {
+page-detallefactura .total {
   font-size: 20px;
+  text-align: right;
 }
 
-page-detallefactura ion-row {
+page-detallefactura .iva {
+  text-align: center;
+}
+
+page-detallefactura .productos ion-row {
   padding: 3px;
   border-bottom: 1px solid #eee;
 }
 
+page-detallefactura .pie ion-row {
+  padding: 3px;
+}
+
+page-detallefactura .pie ion-col[width-40] {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
 page-detallefactura ion-col[width-20] {
   text-align: right;
+}
+
+page-detallefactura ion-col[width-30].importe {
+  margin-top: 7px;
+}
+
+page-detallefactura .toolbar-md {
+  padding: 0 16px;
+}
+
+page-detallefactura .direccion {
+  font-size: 11px;
+}
+
+page-detallefactura ion-card-content {
+  margin-top: -7px;
+}
+
+page-detallefactura .cant {
+  font-size: 10px;
+}
+
+page-detallefactura .moneda {
+  font-size: 14px;
 }
 
 page-facturas .item-md ion-thumbnail {
@@ -22372,9 +22663,9 @@ page-facturas .titulo-tienda, page-facturas .precio-factura {
 }
 
 page-facturas .precio-factura {
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
-  right: 20px;
+  right: 10px;
   color: #124670;
 }
 
@@ -22384,6 +22675,11 @@ page-facturas .item-md.activated {
 
 page-facturas .label-md {
   margin: 0;
+}
+
+page-facturas button.botones-facturas.item.item-block.item-md {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
 }
 
 page-home .card-background-page ion-card {
@@ -22426,22 +22722,45 @@ page-home .label-md {
   margin: 0;
 }
 
+page-intro-tienda #BodyIntroTienda {
+  background-color: #124670;
+  text-align: center;
+  color: white;
+}
+
+page-intro-tienda #ContainerIntroTienda {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: -6pc;
+}
+
+page-intro-tienda #fotofondo {
+  height: 50vh;
+  max-width: none;
+}
+
+page-intro-tienda #imagenlogo {
+  width: 150;
+  height: 150px;
+  border-radius: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 page-mapa .toolbar-background-md {
   background: #44709e;
 }
 
-.ios .scroll-content, .md .scroll-content {
+page-mapa .scroll-content {
   height: 100%;
 }
 
-.ios #map, .md #map {
+page-mapa #map {
   width: 100%;
   height: 95%;
 }
 
 page-mapa-info .content-md {
   background-color: #eee;
-  opacity: 0.9;
 }
 
 page-mapa-info .card-md {
@@ -22450,6 +22769,164 @@ page-mapa-info .card-md {
 
 page-mapa-info .item-md ion-icon[item-left] + .item-inner, page-mapa-info .item-md ion-icon[item-left] + .item-input {
   margin-left: 10px;
+}
+
+page-mapa-info ion-label.label.label-md {
+  color: #000;
+}
+
+page-mapa-info .item-md ion-icon[item-left], page-mapa-info .item-md ion-icon[item-right] {
+  margin-left: 10px;
+}
+
+page-pago .content-md {
+  background-color: #eee;
+  text-align: center;
+}
+
+page-pago span {
+  color: white;
+}
+
+page-pago #modal {
+  color: white;
+  position: relative;
+  overflow-y: hidden;
+}
+
+page-pago #modal #header {
+  background: #eee;
+}
+
+page-pago #modal #header h1 {
+  font: 300 25px Roboto;
+  margin: 0;
+  padding: 10px;
+}
+
+page-pago #modal .object {
+  position: relative;
+  background: #eee;
+}
+
+page-pago #modal .object img {
+  width: 100%;
+}
+
+page-pago #modal .object span {
+  position: absolute;
+  color: white;
+  bottom: 10px;
+  right: 10px;
+  font-size: 3.5em;
+}
+
+page-pago #modal form {
+  background: #eee;
+  padding-top: 6px;
+}
+
+page-pago #modal form input[type='radio'] {
+  display: none;
+}
+
+page-pago #modal form input[type="radio"]:checked + label {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+page-pago #modal form label.card {
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+page-pago #modal form label[for='Master'] {
+  background: url("http://cbwconline.com/IMG/Codepen/Mastercard.svg");
+  background-size: contain;
+}
+
+page-pago #modal form label[for='Visa'] {
+  background: url("http://cbwconline.com/IMG/Codepen/Visa.svg");
+  background-size: contain;
+}
+
+page-pago #modal form label[for='Discover'] {
+  background: url("http://cbwconline.com/IMG/Codepen/Discover.svg");
+  background-size: contain;
+}
+
+page-pago #modal form label {
+  color: black;
+  position: absolute;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+
+page-pago #modal form input {
+  color: black;
+  background: white;
+  font: 300 18px Roboto;
+  display: inline-block;
+  margin: 25px 5px 10px 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+page-pago #modal form #name, page-pago #modal form #number {
+  width: 88%;
+}
+
+page-pago #modal form #expire {
+  width: calc(50% - 30px);
+}
+
+page-pago #modal form #cvc {
+  width: 38%;
+}
+
+page-pago #botonacceder {
+  background: #FF304F;
+  color: white;
+  font: 300 18px Roboto;
+  height: 50px;
+  width: 90%;
+  margin-top: 10px;
+  margin-left: -45%;
+  left: 50%;
+  position: fixed;
+  bottom: 0px;
+  text-transform: none;
+}
+
+page-pago .linea-total {
+  text-align: right;
+  color: #124670;
+}
+
+page-pago .linea-total strong {
+  font-size: 30px;
+}
+
+page-pago .linea-total .total {
+  font-size: 18px;
+}
+
+page-pago .boton-pagar {
+  text-align: center;
+}
+
+page-pago .boton-pagar ion-icon {
+  margin-right: 5px;
+}
+
+page-pago .boton-pagar button {
+  font-size: 18px;
 }
 
 page-perfil #fondoperfil {
@@ -22528,6 +23005,113 @@ page-perfil .item-md.item-label-stacked [item-right], page-perfil .item-md.item-
   font-size: 1.5em;
 }
 
+page-perfil ion-fab {
+  margin-left: -50px;
+}
+
+page-principal ion-icon {
+  position: fixed;
+  left: 14px;
+}
+
+page-principal ion-content {
+  background-image: url("../assets/img/backgroundv2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+page-principal #logo {
+  margin-top: 10%;
+  width: 60%;
+}
+
+page-principal .botoneslogin {
+  padding-bottom: 23px;
+  text-transform: none;
+  width: 90%;
+  font-size: 1.15em;
+  padding-top: 23px;
+  color: white;
+}
+
+page-principal .botonescorreo {
+  padding-bottom: 23px;
+  text-transform: none;
+  width: 40%;
+  font-size: 1.15em;
+  padding-top: 23px;
+  color: white;
+  border-color: white;
+  margin-top: 3%;
+}
+
+page-principal #face {
+  margin-top: 30%;
+  color: white;
+  background-color: #3b5998;
+}
+
+page-principal #google {
+  background-color: #df4a32;
+}
+
+page-principal ion-icon {
+  position: fixed;
+  left: 14px;
+}
+
+page-registro .toolbar-background-md {
+  border-color: none;
+  background: none;
+}
+
+page-registro .toolbar-title-md {
+  color: white;
+}
+
+page-registro .bar-button-default-md, page-registro .bar-button-clear-md-default, page-registro .bar-button-md-default {
+  color: white;
+}
+
+page-registro .header-md::after, page-registro .tabs-md[tabsPlacement="top"] > .tabbar::after, page-registro .footer-md::before, page-registro .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none;
+}
+
+page-registro #botonacceder {
+  padding-bottom: 23px;
+  text-transform: none;
+  width: 100%;
+  font-size: 1.15em;
+  padding-top: 23px;
+  color: white;
+  background-color: #cc3d4a;
+}
+
+page-registro .list-md {
+  margin-top: 31%;
+}
+
+page-registro p {
+  color: white;
+}
+
+page-registro a {
+  text-decoration: underline;
+  color: white;
+}
+
+page-registro ion-content {
+  background-image: url("../assets/img/backgroundv2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+page-registro ion-icon {
+  padding-left: 10px;
+}
+
 page-scanproduct p {
   text-align: center;
   color: #124670;
@@ -22561,7 +23145,7 @@ page-scanstore .nombre, menu-menu .nombre {
   margin-top: -2px;
 }
 
-page-scanstore p, menu-menu p {
+page-scanstore .scan p, menu-menu .scan p {
   text-align: center;
   color: #124670;
   font-size: 20px;
@@ -22592,11 +23176,14 @@ page-scanstore .menu-inner .content-md, menu-menu .menu-inner .content-md {
 }
 
 page-scanstore .item-md, menu-menu .item-md {
-  background: transparent;
   padding-left: 0px;
 }
 
-page-scanstore .item-md.activated, menu-menu .item-md.activated {
+page-scanstore .solution, menu-menu .solution {
+  background: transparent;
+}
+
+page-scanstore .lista-menu1 .item-md.activated, page-scanstore .lista-menu2 .item-md.activated, menu-menu .lista-menu1 .item-md.activated, menu-menu .lista-menu2 .item-md.activated {
   background: #124670;
 }
 
@@ -22628,6 +23215,11 @@ page-scanstore .platform-android ion-title, menu-menu .platform-android ion-titl
 
 page-scanstore .menu-inner, menu-menu .menu-inner {
   width: 250px;
+}
+
+page-scanstore ion-title {
+  text-align: center;
+  margin-top: 5px;
 }
 
 page-slides .tutorial-page {

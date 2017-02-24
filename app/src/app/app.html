@@ -1,12 +1,12 @@
 <ion-menu [content]="content">
 <ion-content>
-    <div menuClose class="cabecera-menu" (click)="NavegarPerfil()">
-      <img [src]="'assets/img/perfil.jpg'" height="80"/>
-      <p class="nombre"><strong>Sergio Pérez</strong></p>
+    <div menuClose class="cabecera-menu" (tap)="NavegarPerfil()">
+      <img src="assets/img/perfil.jpg" height="80"/>
+      <p class="nombre"><strong>Jhon Doe</strong></p>
       <p class="correo">info@appay.es</p>
     </div>
     <ion-list class="lista-menu1">
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button menuClose class="solution" ion-item *ngFor="let p of pages" (click)="openPage(p)">
           <ion-icon [name]="p.icon"></ion-icon>
         {{p.title}}
       </button>
@@ -14,11 +14,11 @@
 
     <!--Esto habra que cambiarlo conforme se vayan haciendo las paginas, en forma de array como en la parte de arriba -->
     <ion-list class="lista-menu2">
-        <button menuClose ion-item *ngFor="let p of pages2" (click)="openPage(p)">
+        <button menuClose class="solution" ion-item *ngFor="let p of pages2" (click)="openPage(p)">
           <ion-icon [name]="p.icon"></ion-icon>
         {{p.title}}
        </button>
-       <button menuClose ion-item (click)="CerrarSesion();">
+       <button class="solution" menuClose ion-item (click)="CerrarSesion();">
           <ion-icon name="exit"></ion-icon>
         Cerrar Sesión
       </button>

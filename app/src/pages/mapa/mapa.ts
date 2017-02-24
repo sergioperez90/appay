@@ -59,8 +59,8 @@ export class MapaPage {
  
   google.maps.event.addListener(marker, 'click', () => {
     //infoWindow.open(this.map, marker);
-  let profileModal = this.modalCtrl.create(MapaInfoPage);
-   profileModal.present();
+      this.navCtrl.push(MapaInfoPage);
+
     
   });
  

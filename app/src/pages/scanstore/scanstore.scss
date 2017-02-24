@@ -28,7 +28,7 @@ page-scanstore, menu-menu {
 }
 
 
-p{
+.scan p{
 text-align: center;
 color: #124670;
 font-size: 20px;
@@ -68,10 +68,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3c92cf', end
 }
 
 .item-md{
-    background: transparent;
     padding-left: 0px;
 }
-.item-md.activated{
+.solution{
+    background: transparent;
+}
+
+.lista-menu1 .item-md.activated, .lista-menu2 .item-md.activated{
     background: #124670;
 }
 
@@ -103,4 +106,12 @@ ion-segment{
 .menu-inner{
     width: 250px;
 }
+    
+}
+
+page-scanstore{
+    ion-title{
+        text-align: center;
+        margin-top: 5px;
+    }
 }

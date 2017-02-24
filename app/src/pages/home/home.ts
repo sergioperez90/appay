@@ -1,8 +1,9 @@
+import { CarritoPage } from './../carrito/carrito';
 import { DetallePage } from './../detalle/detalle';
 import { Usuario, UsuariosService } from './../../services/usuarios.service';
 import { Component, OnInit} from '@angular/core';
 
-import { MenuController } from 'ionic-angular';
+import { MenuController, NavController } from 'ionic-angular';
 
 import { ScanProduct } from '../scanproduct/scanproduct';
 
@@ -21,7 +22,7 @@ export class HomePage implements OnInit{
   deal : any;
   usuarios: Usuario[];
   buscadorUsuarios: string="";
-  constructor(public menuCtrl: MenuController, public usuariosService: UsuariosService) {
+  constructor(public menuCtrl: MenuController, public usuariosService: UsuariosService, public navCtrl: NavController,) {
     this.deal = "ofertas";
   }
     
@@ -61,6 +62,9 @@ export class HomePage implements OnInit{
         this.usuarios=users;
       }
     );
+  }
+  carrito(){
+    this.navCtrl.push(CarritoPage);
   }
 
 

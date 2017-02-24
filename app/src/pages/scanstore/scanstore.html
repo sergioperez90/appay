@@ -4,7 +4,7 @@
       <ion-icon name='menu'></ion-icon>
     </button>
      <ion-buttons end>
-      <button ion-button icon-only color="royal">
+      <button (tap) = "carrito()" ion-button icon-only color="royal">
         <ion-icon name="cart"></ion-icon>
       </button>
     </ion-buttons>
@@ -15,13 +15,13 @@
   
 </ion-header>
 
-<ion-content>
+<ion-content class="scan">
 
   <p>Escanea el <strong>código QR</strong> de la tienda</p>
   <p><img class="qr" src="assets/qr.png"/></p>
 
     <ion-fab right bottom>
-      <button ion-fab color="primary" (click)="scan()"><img src="assets/qr-white.png" height="40" /></button> 
+      <button ion-fab color="primary" (tap)="scan()"><img src="assets/qr-white.png" height="40" /></button> 
     </ion-fab>
     
 </ion-content>

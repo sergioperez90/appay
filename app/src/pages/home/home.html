@@ -4,12 +4,12 @@
       <ion-icon name='menu'></ion-icon>
     </button>
     <ion-buttons end>
-      <button ion-button icon-only color="royal">
+      <button (tap) = "carrito()" ion-button icon-only color="royal">
         <ion-icon name="cart"></ion-icon>
       </button>
     </ion-buttons>
     <ion-title>
-     Zara Alicante
+     Nombre de la tienda
     </ion-title>
   </ion-navbar>
   
@@ -37,13 +37,13 @@
         <ion-card>
           <img src="assets/images/chaqueta.jpg"/>
           <div class="card-title">Chaqueta</div>
-          <div class="card-subtitle">60,95€</div>
+          <div class="card-subtitle">40,95€</div>
         </ion-card>
 
         <ion-card>
           <img src="assets/images/camiseta.jpg"/>
           <div class="card-title">Camiseta</div>
-          <div class="card-subtitle">20,95€</div>
+          <div class="card-subtitle">10,95€</div>
         </ion-card>
 
         <ion-card>

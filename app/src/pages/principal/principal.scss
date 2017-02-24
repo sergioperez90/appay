@@ -1,8 +1,17 @@
 page-principal {
-
+    ion-icon{
+            position: fixed;
+    left: 14px
+    }
+      ion-content{
+        background-image: url('../assets/img/backgroundv2.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        text-align:center;
+    }
 #logo{
     margin-top:10%;
-    width:83%;
+    width:60%;
 }
 
 

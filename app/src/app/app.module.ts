@@ -1,11 +1,16 @@
 import { IntroTiendaPage } from './../pages/intro-tienda/intro-tienda';
+import { DetalleProductoPage } from './../pages/detalle-producto/detalle-producto';
+import { PagoPage } from './../pages/pago/pago';
+import { CarritoPage } from './../pages/carrito/carrito';
 import { PerfilPage } from './../pages/perfil/perfil';
+import { RegistroPage } from './../pages/registro/registro';
+import { AccederPage } from './../pages/acceder/acceder';
+import { PrincipalPage } from './../pages/principal/principal';
 import { MapaInfoPage } from './../pages/mapa-info/mapa-info';
 import { MapaPage } from './../pages/mapa/mapa';
 import { SlidesPage } from './../pages/slides/slides';
 import { DetallefacturaPage } from './../pages/facturas/detallefactura';
 import { FacturasPage} from './../pages/facturas/facturas';
-import { DetallePage } from './../pages/detalle/detalle';
 import { UsuariosService } from './../services/usuarios.service';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -17,7 +22,6 @@ import { ScanProduct } from '../pages/scanproduct/scanproduct';
 import { ScanStore } from '../pages/scanstore/scanstore';
 
 
-
 @NgModule({
   declarations: [
     MyApp,
@@ -26,15 +30,20 @@ import { ScanStore } from '../pages/scanstore/scanstore';
     HomePage,
     ScanProduct,
     ScanStore,
-    DetallePage,
     FacturasPage,
     DetallefacturaPage,
     SlidesPage,
     MapaPage,
     MapaInfoPage,
+    PrincipalPage,
+    AccederPage,
+    RegistroPage,
     PerfilPage,
+    CarritoPage,
+    PagoPage,
+    DetalleProductoPage,
     IntroTiendaPage
-  ],
+      ],
   imports: [
     IonicModule.forRoot(MyApp)
   ],
@@ -46,13 +55,18 @@ import { ScanStore } from '../pages/scanstore/scanstore';
     HomePage,
     ScanProduct,
     ScanStore,
-    DetallePage,
     FacturasPage,
     DetallefacturaPage,
     SlidesPage,
     MapaPage,
     MapaInfoPage,
+    PrincipalPage,
+    AccederPage,
+    RegistroPage,
     PerfilPage,
+    CarritoPage,
+    PagoPage,
+    DetalleProductoPage,
     IntroTiendaPage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, UsuariosService]
