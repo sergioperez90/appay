@@ -40,8 +40,7 @@ export class MyApp {
      this.pages2 = [
       { icon: "pin", title: 'Ver tiendas', component: MapaPage },
       { icon: "hammer", title: 'Soporte', component: ContactPage },
-      { icon: "help", title: 'Ayuda', component: SlidesPage },
-      { icon: "beer", title: 'Bienvenida', component: IntroTiendaPage }        
+      { icon: "help", title: 'Ayuda', component: SlidesPage }
     ];
   }
 

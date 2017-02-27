@@ -30,7 +30,7 @@ export class ScanStore {
         cordova.plugins.barcodeScanner.scan(
           function (result) {
             //Cuando el escaneo es correcto, me redireccionara a la pagina de la tienda
-             ctrl.push(HomePage);
+             ctrl.setRoot(HomePage);
 
            },
           function (error) {

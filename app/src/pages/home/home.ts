@@ -1,3 +1,4 @@
+import { DetalleProductoPage } from './../detalle-producto/detalle-producto';
 import { CarritoPage } from './../carrito/carrito';
 import { DetallePage } from './../detalle/detalle';
 import { Usuario, UsuariosService } from './../../services/usuarios.service';
@@ -28,14 +29,13 @@ export class HomePage implements OnInit{
     
 
      scan() {
-    
+      let ctrl  = this.navCtrl;
         cordova.plugins.barcodeScanner.scan(
           function (result) {
             //Cuando el escaneo es correcto, me redireccionara a la pagina de detalle producto
-              alert("Codigo encontrado\n" +
-                    "Codigo: " + result.text + "\n" +
-                    "Formato: " + result.format + "\n" +
-                    "Cancelado: " + result.cancelled);
+            //result.text
+            ctrl.setRoot(DetalleProductoPage);
+
           },
           function (error) {
               alert("El escaneo a fallado: " + error);
