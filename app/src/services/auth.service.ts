@@ -50,6 +50,18 @@ export class AuthService{
             });
     }
 
+    getToken(){     
+        let headers = new Headers({ 'content-type': 'application/json' });
+        headers.append('X-Requested-With', 'XMLHttpRequest');
+        let options = new RequestOptions({ headers: headers, withCredentials: true });
+        console.log("GET TOKEN");
+        return this.authHttp.post(this.environment["dominio"] +'/loginjwt/info', "", options)
+            .map( response => { 
+               var respJson = response.json(); 
+               return respJson;
+            });
+    }
+
 
 }
   

@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { AccederPage } from './../pages/acceder/acceder';
 import { IntroTiendaPage } from './../pages/intro-tienda/intro-tienda';
 import { DetalleProductoPage } from './../pages/detalle-producto/detalle-producto';
@@ -27,9 +28,13 @@ export class MyApp {
   pages: Array<{icon: string, title: string, component: any}>;
   pages2: Array<{icon: string, title: string, component: any}>;
   storage = new Storage();
+  nombreTienda;
+  foto;
+  nombre;
 
-  constructor(public platform: Platform, private alertCtrl: AlertController, public loadingCtrl: LoadingController) {
+  constructor(public platform: Platform, private alertCtrl: AlertController, public loadingCtrl: LoadingController,public authService: AuthService) {
     this.initializeApp();
+    /*
     console.log("te inicias");
     if(this.storage.get('id_token'))
       console.log("no encontrado token");
@@ -38,7 +43,18 @@ export class MyApp {
 
       let hola=this.storage.get('id_token');
       console.log(hola);
+      */
 
+    //Para coger los datos del token
+    this.storage.ready().then(() => {
+      this.storage.get('id_token').then((nombre_tienda) => {
+        this.nombreTienda = nombre_tienda;
+        console.log(this.nombreTienda);
+      });
+    });
+
+
+    
     // Array de paginas para el menu, con su icono, su titulo, y el enlace.
     this.pages = [
       { icon: "home", title: 'Inicio', component: HomePage },
@@ -99,10 +115,26 @@ export class MyApp {
     this.nav.setRoot(PerfilPage);
   }
 
+
   openPage(page) {
+
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  //Para coger el token
+  ngOnInit(){
+    this.authService.getToken().subscribe(
+          usuario =>{
+          console.log(usuario);
+          this.foto=usuario.data.Foto;
+          this.nombre=usuario.data.Nombre
+          },
+          err => {
+              console.log(err);
+          }
+      );
   }
   
 }
