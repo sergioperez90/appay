@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
 import { NavController, NavParams, MenuController, Events } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 
+//Añadir para variables de entorno
+import {EnvConfigurationProvider} from "gl-ionic2-env-configuration";
+import {ITestAppEnvConfiguration} from "../../env-configuration/ITestAppEnvConfiguration";
 
 @Component({
   selector: 'page-slides',
@@ -14,8 +17,18 @@ import { Storage } from '@ionic/storage';
 
 export class SlidesPage {
   
+  environment:ITestAppEnvConfiguration; //objeto que guarda las variables de entorno
+
   constructor(
+<<<<<<< HEAD
     public navCtrl: NavController, public menu: MenuController, public events: Events, public storage: Storage) {}
+=======
+    public navCtrl: NavController, public menu: MenuController,private envConfiguration: EnvConfigurationProvider<ITestAppEnvConfiguration>) {
+        this.environment = envConfiguration.getConfig(); //guardamos las variables de entorno
+        console.log( this.environment); // And here you have your nice EnvConfigurationProvider
+        //console.log( this.environment["prueba"]); // And here you have your nice EnvConfigurationProvider
+    }
+>>>>>>> origin/master
 
   slides = [
     

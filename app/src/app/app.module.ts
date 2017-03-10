@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { ProductosService } from './../services/productos.service';
 import { TiendasService } from './../services/tienda.service';
+=======
+import { AuthService } from './../services/auth.service';
+>>>>>>> origin/master
 import { IntroTiendaPage } from './../pages/intro-tienda/intro-tienda';
 import { DetalleProductoPage } from './../pages/detalle-producto/detalle-producto';
 import { PagoPage } from './../pages/pago/pago';
@@ -24,6 +28,24 @@ import { ScanProduct } from '../pages/scanproduct/scanproduct';
 import { ScanStore } from '../pages/scanstore/scanstore';
 import { Storage } from '@ionic/storage';
 
+import { GLIonic2EnvConfigurationModule } from 'gl-ionic2-env-configuration'; //Para las variables de entorno
+
+//PARA TOKENS
+import { AUTH_PROVIDERS, AuthHttp, AuthConfig} from 'angular2-jwt';
+import { provideAuth } from 'angular2-jwt';
+import { HttpModule,Http, RequestOptions } from '@angular/http';
+import { Storage } from '@ionic/storage';
+let storage = new Storage();
+export function authHttpServiceFactory(http: Http, options: RequestOptions) {
+  return new AuthHttp(new AuthConfig({
+    tokenName: 'id_token',
+         tokenGetter: (() => storage.get('id_token')),
+        globalHeaders: [{'Content-Type':'application/json'}],
+     }), http, options);
+}
+
+
+//FIN TOKENS
 
 @NgModule({
   declarations: [
@@ -48,7 +70,8 @@ import { Storage } from '@ionic/storage';
     IntroTiendaPage
       ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    GLIonic2EnvConfigurationModule // cargar variables de entorno
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -72,6 +95,23 @@ import { Storage } from '@ionic/storage';
     DetalleProductoPage,
     IntroTiendaPage
   ],
+<<<<<<< HEAD
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, UsuariosService, TiendasService, ProductosService, Storage]
+=======
+  providers: 
+  [
+      {
+      provide: AuthHttp,
+      useFactory: authHttpServiceFactory,
+      deps: [Http, RequestOptions]
+    },
+    {
+      provide: ErrorHandler, 
+      useClass: IonicErrorHandler
+    },
+    UsuariosService,
+    AuthService
+  ]
+>>>>>>> origin/master
 })
 export class AppModule {}
