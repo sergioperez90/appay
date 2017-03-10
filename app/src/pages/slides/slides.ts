@@ -2,7 +2,8 @@ import { PrincipalPage } from './../principal/principal';
 import { ScanStore } from './../scanstore/scanstore';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { NavController, NavParams, MenuController } from 'ionic-angular';
+import { NavController, NavParams, MenuController, Events } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { NavController, NavParams, MenuController } from 'ionic-angular';
 export class SlidesPage {
   
   constructor(
-    public navCtrl: NavController, public menu: MenuController) {}
+    public navCtrl: NavController, public menu: MenuController, public events: Events, public storage: Storage) {}
 
   slides = [
     
@@ -54,12 +55,23 @@ export class SlidesPage {
   ];
 
   next() {
-      this.navCtrl.setRoot(PrincipalPage);
-    }
+     this.storage.get('slide').then((slide) => {
+            if(slide == 'visto'){
+              this.navCtrl.setRoot(ScanStore);
+            }else{
+              this.navCtrl.setRoot(PrincipalPage);
+            }
+         });
+      
+  }
     
   ngOnInit() {
     // the left menu should be disabled on the login page
     this.menu.enable(false);
+
+    this.storage.ready().then(() => {
+        this.storage.set('slide', 'visto');
+    });
   }
 }
 

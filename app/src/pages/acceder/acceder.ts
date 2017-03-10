@@ -32,5 +32,33 @@ export class AccederPage {
 */
   }
 
+  MostrarRecuperar() {
+    let prompt = this.alertCtrl.create({
+      title: 'Recuperar contraseña',
+      message: "Introduzca su correo electrónico para recupera su contraseña y compruebe su correo electrónico",
+      inputs: [
+        {
+          name: 'correo',
+          placeholder: 'Correo electrónico'
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          handler: data => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Enviar correo',
+          handler: data => {
+            console.log('Saved clicked');
+          }
+        }
+      ]
+    });
+    prompt.present();
+  }
+
 }
  

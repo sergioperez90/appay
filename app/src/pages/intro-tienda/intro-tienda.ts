@@ -1,6 +1,7 @@
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController, Events } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
 
 @Component({
@@ -8,25 +9,43 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'intro-tienda.html'
 })
 export class IntroTiendaPage {
+  nombreTienda;
+  foto;
 
   constructor(
     public navCtrl: NavController, 
-    public navParams: NavParams
+    public navParams: NavParams,
+    public menu: MenuController,
+    public storage: Storage,
+    public events: Events
   ){
-    /*
+    
     setTimeout(() => {
     
       this.redirigir();
-    }, 3000);*/
+    }, 3000);
    }
 
    redirigir(){
-  this.navCtrl.push("HomePage");
+     this.navCtrl.setRoot(HomePage);
    }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad IntroTiendaPage');
-  }
+    ionViewWillEnter(){
+      this.menu.enable(false);
+          this.storage.ready().then(() => {
+            this.storage.get('tienda').then((tienda) => {
+              this.nombreTienda = tienda.Nombre;
+              this.foto = tienda.Foto;
+            });
+          
+          });
+    }
+    
+ ngOnInit() {
+   
+      this.events.publish('tienda:existe'); //Como la tienda ya existe aqui, ahora ya se muestra el boton Inicio en el menu
+ }
+  
 
 }
    

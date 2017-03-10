@@ -19,7 +19,7 @@ export class UsuariosService {
     }
 
     comprobacion(){
-        console.log("DEBERIA IR");
+        console.log("OK");
     }
     private usersUrl= 'https://appayservidor.herokuapp.com/usuarios';
      getUsers(): Observable<Usuario[]>{

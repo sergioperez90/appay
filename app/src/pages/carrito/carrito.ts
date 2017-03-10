@@ -1,6 +1,6 @@
 import { PagoPage } from './../pago/pago';
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, MenuController, Events } from 'ionic-angular';
 
 /*
   Generated class for the Carrito page.
@@ -14,9 +14,12 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class CarritoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menu: MenuController, public events: Events) {}
 
   public cantidad: number = 1;
+
+  ngOnInit(){
+  }
 
   increment(e) {
     this.cantidad++;

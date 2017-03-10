@@ -22296,11 +22296,11 @@ page-carrito .linea-total {
 }
 
 page-carrito .linea-total strong {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 page-carrito .linea-total .total {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 page-carrito .boton-pagar {
@@ -22405,9 +22405,11 @@ page-detalle-producto h2 {
 }
 
 page-detalle-producto .imagen {
-  background-image: url(https://cdn3.cnet.com/img/UxcARCVAmoih6RLZqLUT964Lvuw=/620x0/2013/11/11/3dd2de99-84cb-11e3-beb9-14feb5ca9861/Sony_PS4_35618167_03.jpg);
+  background-image: url(../assets/fondo.jpg);
   height: 35vh;
   position: relative;
+  background-size: cover;
+  text-align: center;
 }
 
 page-detalle-producto .cant {
@@ -22469,8 +22471,23 @@ page-detalle-producto .tutorial {
 }
 
 page-detalle-producto ion-fab {
-  bottom: 0;
-  right: 10px;
+  position: relative;
+}
+
+page-detalle-producto .fab {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+page-detalle-producto ion-fab img {
+  height: 25px;
+  width: 25px;
+}
+
+page-detalle-producto .imagen img {
+  height: 80%;
+  margin-top: 20px;
 }
 
 page-detallefactura .card-md {
@@ -22718,6 +22735,21 @@ page-home .platform-ios ion-segment {
   margin-top: 10px;
 }
 
+page-home .numberCircle {
+  font-size: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 0 2px;
+  border-radius: 5px;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 8px;
+}
+
+page-home .platform-ios .numberCircle {
+  margin-top: 10px;
+}
+
 page-home .label-md {
   margin: 0;
 }
@@ -22910,11 +22942,11 @@ page-pago .linea-total {
 }
 
 page-pago .linea-total strong {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 page-pago .linea-total .total {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 page-pago .boton-pagar {
@@ -23118,22 +23150,18 @@ page-scanproduct p {
   font-size: 20px;
 }
 
-page-scanstore .cabecera-menu, menu-menu .cabecera-menu {
-  text-align: center;
-  margin-top: 20px;
-}
-
 page-scanstore .cabecera-menu p, menu-menu .cabecera-menu p {
   font-size: 18px;
   color: #fff;
 }
 
-page-scanstore .cabecera-menu img, menu-menu .cabecera-menu img {
-  border-radius: 100%;
+page-scanstore .cabecera-menu, menu-menu .cabecera-menu {
+  text-align: center;
+  margin-top: 20px;
 }
 
-page-scanstore .platform-ios .cabecera-menu p, menu-menu .platform-ios .cabecera-menu p {
-  color: #000;
+page-scanstore .cabecera-menu img, menu-menu .cabecera-menu img {
+  border-radius: 100%;
 }
 
 page-scanstore .correo, menu-menu .correo {
@@ -23215,6 +23243,17 @@ page-scanstore .platform-android ion-title, menu-menu .platform-android ion-titl
 
 page-scanstore .menu-inner, menu-menu .menu-inner {
   width: 250px;
+}
+
+page-scanstore .numberCircle, menu-menu .numberCircle {
+  font-size: 12px;
+  background: #ff0000;
+  color: #fff;
+  padding: 0 2px;
+  border-radius: 5px;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: 8px;
 }
 
 page-scanstore ion-title {

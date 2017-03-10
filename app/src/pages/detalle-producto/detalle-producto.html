@@ -11,7 +11,7 @@
       </button>
     </ion-buttons>
     <ion-title>
-      Play Station 4
+      Nombre producto
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -19,26 +19,20 @@
 <ion-content parallax-header>
 
     <div class="imagen">
-    <ion-fab>
-       <button (tap) = "presentToast()" ion-fab color="light" mini><img src="assets/add-cart-black.png"/></button>
-    </ion-fab>
+      <img src="assets/cocacola.png" />
     </div>
 
     <ion-grid>
       <ion-row center>
-        <ion-col width-50><h2 class="precio">240,95€</h2></ion-col>
-        <ion-col width-50><ion-note item-right class="cant"><span (tap)="decrement($event)" class="contador">-</span><span class="cantidad">{{ cantidad }}</span><span (tap)="increment($event)" class="contador2">+</span></ion-note></ion-col>
+        <ion-col width-40><h2 class="precio">0,45€</h2></ion-col>
+        <ion-col width-30><ion-note item-right class="cant"><span (tap)="decrement($event)" class="contador">-</span><span class="cantidad">{{ cantidad }}</span><span (tap)="increment($event)" class="contador2">+</span></ion-note></ion-col>
+        <ion-col width-30><ion-fab><button (tap) = "presentToast()" ion-fab color="primary"><img src="assets/add-cart.png"/></button></ion-fab></ion-col>
       </ion-row>
     </ion-grid>
 
-
-    
-    
-
          <span class="num-producto">Num. Producto: 2341414324324134</span>
 
-        <p>Nada volverá a ser igual cuando pruebes la PS4 Pro. Esta consola, desarrollada por Sony te proporciona una experiencia de entretenimiento única. No sólo podrás jugar a otro nivel, con mejores gráficos y mayor fluidez, sinó que podrás disfrutar de tus películas y series favoritas de Netflix y otras app similares.</p>
-
+        <p>Coca-Cola es una bebida gaseosa y refrescante, vendida a nivel mundial, en tiendas, restaurantes y máquinas expendedoras en más de doscientos países o territorios. Es producida por The Coca-Cola Company.</p>
 
     <br>
     <p class="tutorial">Video</p>

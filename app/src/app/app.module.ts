@@ -1,3 +1,5 @@
+import { ProductosService } from './../services/productos.service';
+import { TiendasService } from './../services/tienda.service';
 import { IntroTiendaPage } from './../pages/intro-tienda/intro-tienda';
 import { DetalleProductoPage } from './../pages/detalle-producto/detalle-producto';
 import { PagoPage } from './../pages/pago/pago';
@@ -20,6 +22,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { ScanProduct } from '../pages/scanproduct/scanproduct';
 import { ScanStore } from '../pages/scanstore/scanstore';
+import { Storage } from '@ionic/storage';
 
 
 @NgModule({
@@ -69,6 +72,6 @@ import { ScanStore } from '../pages/scanstore/scanstore';
     DetalleProductoPage,
     IntroTiendaPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, UsuariosService]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, UsuariosService, TiendasService, ProductosService, Storage]
 })
 export class AppModule {}
